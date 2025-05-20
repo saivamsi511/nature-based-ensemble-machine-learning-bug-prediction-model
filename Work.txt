@@ -1,0 +1,34 @@
+Service Provider
+
+Login,
+Browse Data Sets and Train & Test 
+View Trained and Tested Accuracy in Bar Chart 
+View Trained and Tested Accuracy Results 
+View Bug Report Type 
+View Bug Report Type_Ratio 
+Download Predicted Data Sets 
+View Bug Report Type Ratio Results 
+View All Remote Users
+
+
+Remote User
+
+
+REGISTER AND LOGIN,
+PREDICT BUG REPORT TYPE,
+VIEW YOUR PROFILE. 
+
+
+Members
+
+bug_id	
+creation_date	
+component_name	
+product_name	
+short_description	
+long_description	
+reporter_name	
+resolution_category	
+status_category	
+bug_fix_time
+Prediction
