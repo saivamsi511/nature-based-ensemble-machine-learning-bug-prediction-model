@@ -1,0 +1,50 @@
+Nature Based Prediction Model of Bug Reports Based on Ensemble Machine Learning Model
+
+
+IEEE Transaction on Machine Learning,Volume:11,Issue Date:21.June.2023
+
+
+Software maintenance, nature classification, ensemble machine learning algorithm, natural
+language processing, bug reports, machine learning.
+
+
+Nature_Based_Prediction_Model
+
+
+nature_based_prediction_model
+
+
+
+
+normal
+blocker
+major
+minor
+
+
+bug_report_prediction
+
+
+
+bug_id	
+creation_date	
+component_name	
+product_name	
+short_description	
+long_description	
+reporter_name	
+resolution_category	
+status_category	
+bug_fix_time
+Prediction
+
+
+
+
+
+
+
+
+
+
+

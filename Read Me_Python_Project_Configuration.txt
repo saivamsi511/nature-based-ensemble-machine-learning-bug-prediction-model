@@ -1,0 +1,74 @@
+
+
+
+SSLC Certificate error
+-------------------------
+
+Solution
+
+
+python -m pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org --upgrade pip
+
+
+
+1.Install Python 3.6.2
+2.Install Wamp server
+3.Install Pytcharm
+
+4.open shell command or Command Prompt
+
+5.pip install virtualenvwrapper-win
+
+6.pip install django==3.2
+
+-------------------------------------------------------------
+
+7.Install All Modules
+--------------------
+python manage.py makemigrations  Project_Folder_Name
+
+-- Here it will display all missed modules.So install all Modules/Packages
+
+Example
+--------
+pip install mysqlclient
+
+Note
+-----
+(If error comes then keep mysqlclient-1.4.6-cp36-cp36m-win_amd64.whl file near manage.py file and use following command pip install mysqlclient-1.4.6-cp36-cp36m-win_amd64.whl)
+
+pip install xlwt
+pip install openpyxl
+pip install sklearn or scikit-learn
+or
+pip install scikit-learn
+pip install pandas 
+pip install numpy
+pip install seaborn
+
+8.http://localhost/phpmyadmin/ --- to open database and import database
+
+
+9.python manage.py runserver -- to run the project
+
+
+10.http://127.0.0.1:8000 --- use in browser to run the project
+
+---------------------------------------------------------------
+
+Steps
+
+1. Start wamp server
+
+2. start pycharm and open console from view menu
+
+3. Type python manage.py runserver in console
+
+4. Open browser and type http://127.0.0.1:8000
+
+5. Service Provider Username = Admin and Password=Admin
+
+6. For User,Just Register and Login
+
+
+
