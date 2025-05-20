@@ -1,0 +1,191 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+<style>
+  /* Global Styles */
+  body {
+    background-color: #000000;
+  }
+
+  .container-fluid {
+    padding: 50px;
+  }
+
+  .container {
+    background-color: white;
+    padding: 50px;
+  }
+
+  #title {
+    font-family: 'Fredoka One', cursive;
+    color: #b9eb04; /* Tomato color for the title text */
+  }
+
+  .text-uppercase {
+    font-family: 'Righteous', cursive;
+    color: #98fb98; /* Pale green color for text */
+  }
+
+  .tweettext {
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color: ;
+  }
+
+  .style1 {
+    color: #ff6347; /* Tomato color for button and some text */
+    font-weight: bold;
+  }
+
+  .style6 {
+    font-size: 24px;
+    color: #add8e6; /* Light blue color for text */
+    font-weight: bold;
+  }
+
+  .style8 {
+    color: #20b2aa; /* Light sea green for text */
+    font-weight: bold;
+  }
+
+  .style10 {
+    font-size: 16px;
+    color: #ffffff; /* White color for some text */
+    font-weight: bold;
+  }
+
+  /* Form Input Fields */
+  input[type="text"],
+  textarea {
+    color: #333333; /* Dark color for text in input fields */
+  }
+
+  /* Changed color for "PREDICTION OF BUG REPORT TYPE !!!" text */
+  .prediction-title {
+    color: #ffff00; /* Yellow color for the prediction heading */
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding text shadow for better visibility */
+  }
+
+  /* Updated color for "NATURE-BASED ENSEMBLE MACHINE LEARNING BUG PREDICTION MODEL" */
+  .ensemble-title {
+    color: #00FFFF; /* Light cyan for visibility */
+    font-weight: bold;
+    font-size: 28px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Adding shadow for better visibility */
+  }
+
+  /* Style for "Predict" Button */
+  .predict-btn {
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Button Hover Effect */
+  .predict-btn:hover {
+    background-color: #ff4500; /* Darker orange on hover */
+    transform: scale(1.1); /* Slightly increase button size */
+  }
+
+  /* Prediction Result */
+  .style6 {
+    font-size: 24px;
+    color: #add8e6;
+    font-weight: bold;
+  }
+</style>
+
+<body>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <form role="form" method="POST">
+            {% csrf_token %}
+            <fieldset>
+              <p class="text-uppercase pull-center prediction-title">PREDICTION OF BUG REPORT TYPE </span> !!! </p>
+              <hr>
+
+              {% csrf_token %}
+              <table width="1122" align="center">
+                <tr>
+                  <td width="287" height="44" bgcolor="#FF0000"><div align="center" class="style8">Enter bug_id</div></td>
+                  <td width="269"><input type="text" name="bug_id"></td>
+                  <td width="269" bgcolor="#FF0000"><span class="style8">Enter creation_date</span></td>
+                  <td width="269"><input type="text" name="creation_date"></td>
+                </tr>
+                <tr>
+                  <td height="44" bgcolor="#FF0000"><div align="center" class="style8">Enter component_name</div></td>
+                  <td><input type="text" name="component_name"></td>
+                  <td bgcolor="#FF0000"><span class="style8">Enter product_name</span></td>
+                  <td><input type="text" name="product_name"></td>
+                </tr>
+                <tr>
+                  <td height="44" bgcolor="#FF0000"><div align="center" class="style8">Enter short_description</div></td>
+                  <td><textarea name="short_description"></textarea></td>
+                  <td bgcolor="#FF0000"><span class="style8">Enter long_description</span></td>
+                  <td><textarea name="long_description"></textarea></td>
+                </tr>
+                <tr>
+                  <td height="44" bgcolor="#FF0000"><div align="center" class="style8">Enter reporter_name</div></td>
+                  <td><input type="text" name="reporter_name"></td>
+                  <td bgcolor="#FF0000"><span class="style8">Enter resolution_category</span></td>
+                  <td><input type="text" name="resolution_category"></td>
+                </tr>
+                <tr>
+                  <td height="44" bgcolor="#FF0000"><div align="center" class="style8">Enter status_category</div></td>
+                  <td><input type="text" name="status_category"></td>
+                  <td bgcolor="#FF0000"><span class="style8">Enter bug_fix_time</span></td>
+                  <td><input type="text" name="bug_fix_time"></td>
+                </tr>
+                <tr>
+                  <td height="44" bgcolor="#FFFFFF">&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td bgcolor="#FFFFFF"><input align="center" name="submit" type="submit" class="predict-btn" value="Predict"></td>
+                  <td>&nbsp;</td>
+                </tr>
+              </table>
+            </fieldset>
+          </form>
+
+          <form role="form" method="POST">
+            {% csrf_token %}
+            <fieldset>
+              <hr>
+              <div>
+                <table width="762" border="0" align="center">
+                  <tr>
+                    <td width="430" bgcolor="#FF0000"><div align="center"><span class="style6">PREDICTION OF BUG REPORT TYPE </span></div></td>
+                    <td width="258" bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" >
+                      <div align="center">{{objs}}</div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="col-md-2">
+          <!-------null------->
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

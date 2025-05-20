@@ -1,0 +1,189 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="images/icon.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+    <style>
+        body {
+            background: url("{% static 'bg.jpg' %}");
+        }
+
+        .container-fluid {
+            padding: 50px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+        }
+
+        #title {
+            font-family: 'Fredoka One', cursive;
+        }
+
+        .text-muted {
+            color: white;
+            font-weight: bold;
+        }
+
+        .text-uppercase {
+            font-family: 'Righteous', cursive;
+        }
+
+        .style1 {
+            color: #FFFFFF;
+        }
+
+        .style4 {
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+
+        .style5 {
+            font-family: 'Righteous', cursive;
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+
+        /* Button Styling */
+        .btn {
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-md {
+            background-color: #28a745;
+            color: white;
+            border: none;
+        }
+
+        .btn-md:hover {
+            background-color: #218838;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-lg {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            margin-top: 8px;
+        }
+
+        .btn-lg:hover {
+            background-color: #0056b3;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn a:hover {
+            color: white;
+        }
+
+        /* Input Field Styling */
+        input[type="text"], input[type="password"] {
+            width: 80%;  /* Set the width of the fields to 80% */
+            max-width: 350px;  /* Optional: limits the max width */
+            padding: 8px;
+            font-size: 14px;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid #fff;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            transition: border 0.3s ease, box-shadow 0.3s ease;
+            margin-left: auto;  /* Center the input fields */
+            margin-right: auto;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #28a745;
+            box-shadow: 0 0 8px rgba(40, 167, 69, 0.8);
+            outline: none;
+        }
+
+        input::placeholder {
+            color: #ddd;
+        }
+
+        /* Additional Input Styling */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div>
+            <h2 class="style1 text-center" id="title"><strong>NATURE-BASED ENSEMBLE MACHINE LEARNING BUG PREDICTION MODEL</strong></h2>
+            <p class="text-center">
+                <span class="style4"><small id="passwordHelpInline" class="text-muted">
+                    </small></span>
+            </p>
+            <hr>
+            <div class="row">
+                <div class="col-md-5">
+                    <form role="form" method="POST">
+                        {% csrf_token %}
+                        <fieldset>
+                            <p class="text-uppercase pull-center">&nbsp;</p>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div class="col-md-2">
+                    <!-------null------->
+                </div>
+
+                <div class="col-md-5">
+                    <form method="POST" role="form">
+                        {% csrf_token %}
+
+                        <fieldset>
+                            <p class="style5"> Login Using Your Account: </p>
+
+                            <div class="form-group">
+                                <input type="text" name="username" placeholder="User Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" placeholder="Password" required>
+                            </div>
+                            <div>
+                                <input type="submit" name="submit1" class="btn btn-md" value="Sign In">
+                            </div><br>
+
+                            <p class="style5"> Login Using Your Account: </p>
+
+                            <div>
+                                <button class="btn btn-lg"><a href="{% url 'serviceproviderlogin' %}">Service Provider</a></button>
+                                <button class="btn btn-lg"><a href="{% url 'Register1' %}">Register</a></button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

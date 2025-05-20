@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+
+  <link rel="icon" href="{% static 'images/icon.png' %}" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Fredoka+One&display=swap" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: url("{% static 'bg.jpg' %}") no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Righteous', cursive;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      animation: slideIn 1s ease;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    h2 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 26px;
+      color: #d32f2f;
+      margin-bottom: 20px;
+    }
+
+    .form-control {
+      border-radius: 8px;
+      height: 45px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .btn-login {
+      background-color: #d32f2f;
+      color: #fff;
+      border-radius: 25px;
+      padding: 10px 25px;
+      font-weight: bold;
+      font-size: 16px;
+      border: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn-login:hover {
+      background-color: #9a0007;
+    }
+
+    .link-text {
+      margin-top: 20px;
+      display: block;
+      font-size: 14px;
+      color: #d32f2f;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .link-text:hover {
+      color: #9a0007;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-container">
+    <h2>Bug Prediction Model</h2>
+
+    <form method="POST">
+      {% csrf_token %}
+      <input type="text" name="username" class="form-control" placeholder="Username" required>
+      <input type="password" name="password" class="form-control" placeholder="Password" required>
+      <button type="submit" name="submit1" class="btn btn-login btn-block mt-3">Login</button>
+    </form>
+
+    <a href="{% url 'login' %}" class="link-text">User Login</a>
+  </div>
+
+</body>
+
+</html>
